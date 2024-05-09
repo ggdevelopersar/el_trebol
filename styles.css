@@ -55,7 +55,7 @@ body {
   margin: 1rem;
   padding: 1rem;
   border: 3px solid white;
-  max-height: 120vh;
+  max-height: 130vh;
   overflow-y: auto;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
@@ -69,7 +69,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: 1fr;  
   justify-content: center;
-  max-height: 120vh;
+  max-height: 130vh;
   overflow-y: auto;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
