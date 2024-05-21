@@ -240,6 +240,38 @@ label {
 
 
 
+
+
+@media (max-width: 1600px) {
+  .filtros-colores{
+    color: white;
+    font-size: 13px;
+  }
+  #filters{
+    margin-right: -40px;
+  }
+
+  .grid-de-productos{
+    margin-left: 40px;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+}
+
+@media (max-width: 1259px) {
+  .filtros-colores{
+    color: white;
+    font-size: 13px;
+  }
+  #filters{
+    margin-right: -40px;
+  }
+
+  .grid-de-productos{
+    margin-left: 40px;
+    grid-template-columns: 1fr 1fr  ;
+  }
+}
+
 @media (max-width: 768px) {
   .filtros-colores{
     color: white;
@@ -255,7 +287,9 @@ label {
   }
 }
 
-
+.producto p{
+  margin-bottom: -0.5px;
+}
 /*SECCION NOSOTROS*/
 .gallery-container {
   background-color: #9D0722;
@@ -306,6 +340,11 @@ label {
     height: 300px; /* Establece la altura deseada para todas las imágenes */
 
   }
+}
+
+@media screen and (max-width: 768px) {
+
+
 }
 
 /*SECCIÓN FOOTER*/
