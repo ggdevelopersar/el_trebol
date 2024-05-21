@@ -245,7 +245,7 @@ label {
 @media (max-width: 1600px) {
   .filtros-colores{
     color: white;
-    font-size: 13px;
+    font-size: 20px;
   }
   #filters{
     margin-right: -40px;
@@ -260,7 +260,7 @@ label {
 @media (max-width: 1259px) {
   .filtros-colores{
     color: white;
-    font-size: 13px;
+    font-size: 20px;
   }
   #filters{
     margin-right: -40px;
@@ -275,7 +275,7 @@ label {
 @media (max-width: 768px) {
   .filtros-colores{
     color: white;
-    font-size: 13px;
+    font-size: 18px;
   }
   #filters{
     margin-right: -40px;
