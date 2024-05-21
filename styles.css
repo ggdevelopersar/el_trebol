@@ -79,7 +79,7 @@ body {
   border: 1px solid white;
   height: 55vh;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px; /* Añadir padding para espacio interno */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
 }
@@ -153,7 +153,7 @@ label {
   border: 3px solid white;
   max-height: 130vh;
   overflow-y: auto;
-  border-radius: 20px;
+  border-radius: 10px;;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
@@ -167,7 +167,7 @@ label {
   justify-content: center;
   max-height: 130vh;
   overflow-y: auto;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
