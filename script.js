@@ -121,6 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         cartTitle.textContent = `Carrito (${cartItems.length} producto${cartItems.length !== 1 ? 's' : ''})`;
         cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+
+        // Deshabilitar botón si el total es menor a 70,000
+        cartButton.disabled = total <= 70000;
+
+        // Agregar mensajes de depuración
+        console.log('Total:', total);
+        console.log('Botón deshabilitado:', cartButton.disabled);
     }
 
     cartButton.addEventListener('click', () => {
@@ -138,4 +145,3 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(whatsappUrl, '_blank');
     });
 });
-
