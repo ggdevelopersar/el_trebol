@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const productos = document.querySelectorAll('.producto');
     const searchBar = document.getElementById('searchBar');
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imgZoom");
+    const span = document.getElementsByClassName("close")[0];
 
     checkboxes.forEach(function(checkbox) {
         checkbox.addEventListener('change', filterProducts);
@@ -34,6 +37,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 producto.style.display = 'none';
             }
         });
+    }
+    document.querySelectorAll('.imagenes').forEach(function(image) {
+        image.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 });
 
@@ -147,3 +166,4 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(whatsappUrl, '_blank');
     });
 });
+
