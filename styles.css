@@ -56,6 +56,10 @@ body {
 }
 
 /* Estilos para pantallas grandes */
+@media (min-width: 1621px) {
+  .full-screen-section {
+      margin-left: 40px;
+  }
 @media (max-width: 1300px) {
   .full-screen-section {
       margin-bottom: -100px; /* Ajusta este valor según sea necesario */
@@ -63,7 +67,6 @@ body {
 }
 @media (max-width: 1263px) {
   .full-screen-section {
-      margin-left: 50px;
       margin-bottom: -10px; /* Ajusta este valor según sea necesario */
   }
 }
