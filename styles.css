@@ -55,6 +55,44 @@ body {
   margin: 0; /* Eliminar el margen */
 }
 
+#talle-1087, #color-1087 {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgb(170, 28, 58);
+  border: 2px solid #fffefe;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%; /* Mantiene el tamaño por defecto */
+}
+
+#talle-1087:focus, #color-1087:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#talle-1087::after, #color-1087::after {
+  content: '▼';
+  font-size: 12px;
+  color: #333333;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#talle-1087:hover, #color-1087:hover {
+  border-color: #007bff;
+}
+
+/* Estilo para el label */
+
+
 /* Estilos para pantallas grandes */
 @media (max-width: 1300px) {
   .full-screen-section {
