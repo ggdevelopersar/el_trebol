@@ -79,7 +79,7 @@ body {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 767px) {
   .full-screen-section {
-      margin-bottom: -100px;
+      margin-bottom: -1000px;
   }
 }
 
