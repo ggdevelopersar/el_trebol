@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchBar = document.getElementById('searchBar');
     const products = document.querySelectorAll('.producto');
     const checkboxes = document.querySelectorAll('#filters input[type="checkbox"]');
+    const radios = document.querySelectorAll('#filters input[type="radio"]');
     const cart = document.querySelector('.carrito-productos');
     const cartTitle = document.querySelector('.carrito-titulo');
     const cartTotal = document.querySelector('.carrito-total');
@@ -51,15 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchBar.addEventListener('input', filterProducts);
     checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterProducts));
+    radios.forEach(radio => radio.addEventListener('change', filterProducts));
 
     function filterProducts() {
         const searchText = searchBar.value.toLowerCase();
         const activeCategories = Array.from(checkboxes)
             .filter(checkbox => checkbox.checked && checkbox.dataset.category)
             .map(checkbox => checkbox.dataset.category);
-        const activeBrands = Array.from(checkboxes)
-            .filter(checkbox => checkbox.checked && checkbox.dataset.brand)
-            .map(checkbox => checkbox.dataset.brand);
+        const activeBrands = Array.from(radios)
+            .filter(radio => radio.checked && radio.dataset.brand)
+            .map(radio => radio.dataset.brand);
 
         products.forEach(product => {
             const category = product.querySelector('img').dataset.category;
