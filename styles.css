@@ -73,7 +73,7 @@ body {
 }
 @media (max-width: 900px) {
   .full-screen-section {
-      margin-bottom: -300px; /* Ajusta este valor según sea necesario */
+      margin-bottom: -100px; /* Ajusta este valor según sea necesario */
   }
 }
 /* Estilos para pantallas pequeñas */
