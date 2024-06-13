@@ -63,7 +63,7 @@ body {
 }
 @media (max-width: 1165px) {
   .full-screen-section {
-      margin-bottom: -200px; /* Ajusta este valor según sea necesario */
+      margin-bottom: -300px; /* Ajusta este valor según sea necesario */
   }
 }
 @media (max-width: 900px) {
