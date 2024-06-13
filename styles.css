@@ -56,7 +56,7 @@ body {
 }
 
 /* Estilos para pantallas grandes */
-@media (min-width: 1621px) {
+@media (max-width: 1700px) {
   .full-screen-section {
       margin-left: 40px;
   }
