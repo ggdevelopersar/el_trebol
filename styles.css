@@ -58,6 +58,7 @@ body {
 /* Estilos para pantallas grandes */
 @media (max-width: 1300px) {
   .full-screen-section {
+      margin-left: 50px;
       margin-bottom: -100px; /* Ajusta este valor según sea necesario */
   }
 }
