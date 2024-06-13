@@ -77,7 +77,7 @@ body {
   }
 }
 /* Estilos para pantallas pequeñas */
-@media (max-width: 767px) {
+@media (max-width: 507px) {
   .full-screen-section {
       margin-bottom: -700px;
   }
