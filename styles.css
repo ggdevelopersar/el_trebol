@@ -560,6 +560,12 @@ label {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  animation: fadeIn 0.5s; /* Añadir animación al modal */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .modal-content {
@@ -567,6 +573,12 @@ label {
   display: block;
   width: 80%;
   max-width: 700px;
+  animation: zoomIn 0.1s; /* Añadir animación al contenido del modal */
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
 }
 
 .close {
