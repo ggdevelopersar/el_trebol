@@ -284,6 +284,15 @@ label {
 }
 }
 
+@media screen and (max-width: 768px) {
+  .gallery-item {
+    width: 100%;
+    margin: 0;
+  }
+  .gallery-item img {
+    height: 200px; /* Reduce la altura de las imágenes para pantallas pequeñas */
+  }
+}
 
 /*SECCION BANNER*/
 .banner {
@@ -295,6 +304,12 @@ label {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 50px; /* Reducir el espacio interno en pantallas más pequeñas */
+    font-size: 14px; /* Reducir el tamaño del texto en pantallas más pequeñas */
+  }
+}
 
 
 
@@ -349,6 +364,11 @@ label {
 }
 
 /* Media query para ajustar el botón en pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .boton-comprar {
+    width: auto; /* El botón ocupará el ancho necesario */
+  }
+}
 
 .boton-comprar:hover {
   color: #333;
@@ -658,10 +678,32 @@ label {
 
 
 /* Estilos para pantallas grandes */
-
-
+@media (max-width: 1300px) {
+  .full-screen-section {
+      margin-bottom: -100px; /* Ajusta este valor según sea necesario */
+  }
+}
+@media (max-width: 1263px) {
+  .full-screen-section {
+      margin-bottom: -10px; /* Ajusta este valor según sea necesario */
+  }
+}
+@media (max-width: 1165px) {
+  .full-screen-section {
+      margin-bottom: -300px; /* Ajusta este valor según sea necesario */
+  }
+}
+@media (max-width: 900px) {
+  .full-screen-section {
+      margin-bottom: -100px; /* Ajusta este valor según sea necesario */
+  }
+}
 /* Estilos para pantallas pequeñas */
-
+@media (max-width: 507px) {
+  .full-screen-section {
+      margin-bottom: -500px;
+  }
+}
 
 
 
@@ -680,17 +722,6 @@ label {
   .grid-de-productos{
     
     grid-template-columns: 1fr 1fr 1fr ;
-  }
-}
-
-@media (max-width: 1300px) {
-  .full-screen-section {
-      margin-bottom: -100px; /* Ajusta este valor según sea necesario */
-  }
-}
-@media (max-width: 1263px) {
-  .full-screen-section {
-      margin-bottom: -10px; /* Ajusta este valor según sea necesario */
   }
 }
 
@@ -740,17 +771,6 @@ label {
 }
 
 
-@media (max-width: 1165px) {
-  .full-screen-section {
-      margin-bottom: -300px; /* Ajusta este valor según sea necesario */
-  }
-}
-@media (max-width: 900px) {
-  .full-screen-section {
-      margin-bottom: -100px; /* Ajusta este valor según sea necesario */
-  }
-}
-
 @media  screen and (max-width: 860px) {
   .filtros-colores{
     color: white;
@@ -764,38 +784,13 @@ label {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .boton-comprar {
-    width: auto; /* El botón ocupará el ancho necesario */
-  }
-  .banner {
-    padding: 50px; /* Reducir el espacio interno en pantallas más pequeñas */
-    font-size: 14px; /* Reducir el tamaño del texto en pantallas más pequeñas */
-  }
-
-  .gallery-item {
-    width: 100%;
-    margin: 0;
-  }
-  .gallery-item img {
-    height: 200px; /* Reduce la altura de las imágenes para pantallas pequeñas */
-  }
-}
-
-
 @media  screen and (max-width: 575px) {
 
   .producto{
-    height: 82vh;
+    height: 8vh;
   }
   .grid-de-productos{
    
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 507px) {
-  .full-screen-section {
-      margin-bottom: -500px;
   }
 }
