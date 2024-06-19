@@ -1,27 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const radios = document.querySelectorAll('input[type="radio"]');
+    const options = document.querySelectorAll('option[class="filtros-modales"]');
     const productos = document.querySelectorAll('.producto');
     const searchBar = document.getElementById('searchBar');
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("imgZoom");
     const span = document.getElementsByClassName("close")[0];
+    const filterButton = document.getElementById('searchFilter');
 
-    checkboxes.forEach(function(checkbox) {
+    checkboxes.forEach(function (checkbox) {
         checkbox.addEventListener('change', filterProducts);
     });
+
+    radios.forEach(function (radio) {
+        radio.addEventListener('change', filterProducts);
+    });
+
+    options.forEach(function (options) {
+        options.addEventListener('change', filterProducts);
+    });
+
+
 
     searchBar.addEventListener('input', filterProducts);
 
     function filterProducts() {
-        const selectedCategories = Array.from(document.querySelectorAll('input[data-category]:checked')).map(function(checkbox) {
+        const selectedCategories = Array.from(document.querySelectorAll('input[data-category]:checked')).map(function (checkbox) {
             return checkbox.getAttribute('data-category');
         });
-        const selectedBrands = Array.from(document.querySelectorAll('input[data-brand]:checked')).map(function(checkbox) {
+        const selectedBrands = Array.from(document.querySelectorAll('input[data-brand]:checked')).map(function (checkbox) {
             return checkbox.getAttribute('data-brand');
         });
+
         const searchText = searchBar.value.toLowerCase();
 
-        productos.forEach(function(producto) {
+        productos.forEach(function (producto) {
             const image = producto.querySelector('img');
             const category = image.getAttribute('data-category');
             const brand = image.getAttribute('data-brand');
@@ -38,18 +52,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    document.querySelectorAll('.imagenes').forEach(function(image) {
-        image.addEventListener('click', function() {
+
+    document.querySelectorAll('.imagenes').forEach(function (image) {
+        image.addEventListener('click', function () {
             modal.style.display = "block";
             modalImg.src = this.src;
         });
     });
 
-    span.onclick = function() {
+    span.onclick = function () {
         modal.style.display = "none";
     }
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
@@ -167,3 +182,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.getElementById('searchFilter').addEventListener('click', function() {
+    document.querySelector('.overlay').classList.add('active');
+    document.querySelector('.filter-modal').classList.add('active');
+    
+    document.body.style.transition = "transform 0.3s ease-in-out";
+});
+
+document.querySelector('.overlay').addEventListener('click', function() {
+    document.querySelector('.overlay').classList.remove('active');
+    document.querySelector('.filter-modal').classList.remove('active');
+    
+    document.body.style.transition = "transform 0.3s ease-in-out";
+});
+
+document.getElementById('apply-filters').addEventListener('click', function() {
+    // Aquí puedes manejar los filtros aplicados
+    document.querySelector('.overlay').classList.remove('active');
+    document.querySelector('.filter-modal').classList.remove('active');
+    
+    document.body.style.transition = "transform 0.3s ease-in-out";
+})
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.querySelector('.overlay').classList.remove('active');
+    document.querySelector('.filter-modal').classList.remove('active');
+    document.body.style.transition = "transform 0.3s ease-in-out";
+});
