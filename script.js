@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (cartItems.length === 0) {
             Swal.fire({
-                title: '<span style="color:#000000">Carrito vacío<span>Carrito vacío',
+                title: '<span style="color:#000000">Carrito vacío<span>',
                 text: 'Por favor agregue productos antes de comprar por el Whatsapp de Lenceria El Trebol. Muchas Gracias.',
                 confirmButtonColor: "#187c2e",
                 timer: 3000
