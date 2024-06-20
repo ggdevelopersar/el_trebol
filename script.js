@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (cartItems.length === 0) {
             Swal.fire({
-                title: 'Carrito vacío',
+                title: '<span style="color:#000000">Carrito vacío<span>Carrito vacío',
                 text: 'Por favor agregue productos antes de comprar por el Whatsapp de Lenceria El Trebol. Muchas Gracias.',
                 confirmButtonColor: "#187c2e",
                 timer: 3000
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         } else if (total < 70000) {
             Swal.fire({
-                title: 'Monto insuficiente',
+                title: '<span style="color:#000000">Monto insuficiente<span>',
                 text: 'El monto total debe ser mayor o igual a $70,000 para realizar la compra.',
                 confirmButtonColor: "#187c2e",
                 timer: 3000
