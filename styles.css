@@ -153,6 +153,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   border: 2px solid black;
+  width: 100%;
 }
 
 .producto button:hover {
@@ -645,13 +646,17 @@ label {
 
 /* Estilos para el botón de cerrar */
 #apply-filters {
+  display: flex;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #f44336; /* Color de fondo rojo */
   color: white; /* Color de texto blanco */
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  cursor: pointer;
+  align-items: center;
+  margin: 0 auto;
+ /* Cambiar cursor al pasar sobre el botón */
 }
 
 #apply-filters:hover {
@@ -659,6 +664,7 @@ label {
 }
 .filter-modal.active {
   display: block;
+  width: 25vw;
 }
 .overlay {
   display: none;
@@ -787,7 +793,7 @@ label {
 @media  screen and (max-width: 575px) {
 
   .producto{
-    height: 80git vh;
+    height: 80vh;
   }
   .grid-de-productos{
    
