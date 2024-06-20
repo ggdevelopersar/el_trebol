@@ -159,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
         cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 
         // Deshabilitar botón si el total es menor a 70,000
-        cartButton.disabled = total <= 70000;
 
         // Agregar mensajes de depuración
         console.log('Total:', total);
@@ -167,16 +166,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     cartButton.addEventListener('click', () => {
+        // Verificar si el total es menor a 70000
+
         if (cartItems.length === 0) {
-            alert('Por favor agregue productos antes de comprar por el Whatsapp de Lenceria El Trebol. Muchas Gracias.');
+            Swal.fire({
+                title: 'Carrito vacío',
+                text: 'Por favor agregue productos antes de comprar por el Whatsapp de Lenceria El Trebol. Muchas Gracias.',
+                confirmButtonColor: "#187c2e",
+                timer: 3000
+            });
+            return;
+        } else if (total < 70000) {
+            Swal.fire({
+                title: 'Monto insuficiente',
+                text: 'El monto total debe ser mayor o igual a $70,000 para realizar la compra.',
+                confirmButtonColor: "#187c2e",
+                timer: 3000
+            });
             return;
         }
-
+    
+        // Verificar si el carrito está vacío
+        
+    
+        // Proceder con la redirección a WhatsApp
         const cartMessage = cartItems.map(item => `${item.name} - Talle: ${item.talle} - Color: ${item.color} - ${item.quantity} unidad(es) - $${item.subtotal.toFixed(2)}`).join('\n');
         const totalMessage = `Total: $${total.toFixed(2)}`;
         const whatsappMessage = `Hola, me gustaría hacer el siguiente pedido:\n${cartMessage}\n${totalMessage}`;
         
-        const whatsappNumber = '541131669168'; // Reemplaza con WhatsApp
+        const whatsappNumber = '541131669168'; // Reemplaza con el número de WhatsApp adecuado
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
         window.open(whatsappUrl, '_blank');
     });
