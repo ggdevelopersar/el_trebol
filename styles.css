@@ -376,13 +376,11 @@ label {
 
 /* Estilos de la tienda */
 
-
 .producto select {
   width: 100%;
   color: white;
   background-color: #9D0722;
 }
-
 
 .separamos-columnas {
   display: grid;
@@ -391,14 +389,13 @@ label {
   overflow: hidden; /* Oculta el scrollbar nativo */
 }
 
-.separamos-filtros{
+.separamos-filtros {
   display: grid;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.boton-filtros{
+.boton-filtros {
   display: none;
-  
 }
 
 #searchBar {
@@ -407,7 +404,7 @@ label {
   box-sizing: border-box;
 }
 
-#searchFilter{
+#searchFilter {
   width: 60%;
   padding: 10px;
   box-sizing: border-box;
@@ -419,7 +416,6 @@ label {
 }
 
 .search-container input {
-  
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -437,6 +433,76 @@ label {
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
+}
+
+/* Estilos para los productos */
+.grid-de-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos para vista móvil */
+@media (max-width: 768px) {
+  .separamos-columnas {
+    grid-template-columns: 1fr; /* Una columna para filtros y productos en dispositivos móviles */
+  }
+
+  .grid-de-productos {
+    grid-template-columns: 1fr 1fr; /* Dos columnas para productos en dispositivos móviles */
+    gap: 10px;
+  }
+
+  .producto {
+    padding: 5px; /* Ajusta el padding si es necesario */
+  }
+
+  .producto img {
+    width: 100%; /* Ajusta el tamaño de la imagen dentro del producto */
+    height: auto;
+  }
+
+  .producto p,
+  .producto span,
+  .producto button,
+  .producto label,
+  .producto select {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente */
+    padding: 5px; /* Ajusta el padding si es necesario */
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas */
+@media (max-width: 576px) {
+  .grid-de-productos {
+    grid-template-columns: 1fr 1fr; /* Mantén dos columnas en dispositivos más pequeños */
+    gap: 10px;
+  }
+
+  .producto {
+    margin-bottom: -20px;
+    padding: 5px; /* Ajusta el padding si es necesario */
+  }
+
+  .producto img {
+    width: 100%; /* Ajusta el tamaño de la imagen dentro del producto */
+    height: auto;
+  }
+
+  .producto p,
+  .producto span,
+  .producto button,
+  .producto label,
+  .producto select {
+    font-size: 0.8em; /* Ajusta el tamaño de la fuente */
+    padding: 4px; /* Ajusta el padding si es necesario */
+  }
 }
 
 /*SECCIÓN FOOTER*/
