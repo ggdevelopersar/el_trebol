@@ -728,7 +728,7 @@ label {
 }
 .filter-modal.active {
   display: block;
-  width: 25vw;
+  width: 50vw;
 }
 .overlay {
   display: none;
